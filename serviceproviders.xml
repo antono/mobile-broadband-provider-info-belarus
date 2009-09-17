@@ -296,8 +296,12 @@ conceived.
 		<gsm>
 			<network-id mcc="505" mnc="03"/>
 			<apn value="vfinternet.au">
+				<name>Postpaid</name>
 				<dns>192.189.54.33</dns>
 				<dns>210.80.58.3</dns>
+			</apn>
+			<apn value="vfprepaymbb">
+				<name>Prepaid</name>
 			</apn>
 		</gsm>
 	</provider>
@@ -417,6 +421,18 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
+		<name>Telenet Mobile</name>
+		<gsm>
+			<network-id mcc="206" mnc="10"/>
+			<apn value="telenetwap.be">
+				<name>Walk &amp; Talk</name>
+			</apn>
+			<apn value="telenetwap.be">
+				<name>Walk &amp; Surf</name>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
 		<name>Orange</name>
 		<gsm>
 			<apn value="orangeinternet"/>
@@ -474,10 +490,40 @@ conceived.
 			</apn>
 		</gsm>
 	</provider>
+	<provider>
+		<name>Vivacom</name>
+		<gsm>
+			<network-id mcc="284" mnc="03"/>
+			<apn value="internet.vivacom.bg">
+				<!-- http://www.vivacom.bg/en/residential/help_and_advice/common_questions/mobile_postpaid/8/ -->
+				<name>Vivacom Internet (Postpaid)</name>
+				<username>vivacom</username>
+				<password>vivacom</password>
+			</apn>
+			<apn value="internet.vivatel.bg">
+				<name>Vivatel (old)</name>
+				<username>vivatel</username>
+				<password>vivatel</password>
+				<dns>192.168.123.123</dns>
+			</apn>
+		</gsm>
+	</provider>
 </country>
 
 <!-- Brazil -->
 <country code="br">
+	<provider>
+		<!-- Brasil Telecom was bought by Oi on 2009-01-09 and will be phased
+		     out and transitioned to Oi.
+		  -->
+		<name>Brasil Telecom</name>
+		<gsm>
+			<apn value="brt.br">
+				<username>BrT</username>
+				<password>BrT</password>
+			</apn>
+		</gsm>
+	</provider>
 	<provider>
 		<name>Claro</name>
 		<gsm>
@@ -576,10 +622,31 @@ conceived.
 	</provider>
 </country>
 
+<!-- Brunei -->
+<country code="bn">
+	<provider>
+		<name>B-Mobile</name>
+		<gsm>
+			<network-id mcc="528" mnc="02"/>
+			<apn value="bmobilewap"/>
+		</gsm>
+	</provider>
+	<provider>
+		<name>DSTCOM</name>
+		<gsm>
+			<network-id mcc="528" mnc="11"/>
+			<apn value="dst.wap">
+				<username>wap</username>
+				<password>wap</password>
+			</apn>
+		</gsm>
+	</provider>
+</country>
+
 <!-- Belarus -->
 <country code="by">
 	<provider>
-                <!-- http://www.velcom.by/ru/services/gprs/settings/ -->
+		<!-- http://www.velcom.by/ru/services/gprs/settings/ -->
 		<name>velcom</name>
 		<gsm>
 			<network-id mcc="257" mnc="01"/>
@@ -786,8 +853,6 @@ conceived.
 			<apn value="gprs.swisscom.ch">
 				<username>gprs</username>
 				<password>gprs</password>
-				<dns>164.128.36.34</dns>
-				<dns>164.128.76.39</dns>
 			</apn>
 		</gsm>
 	</provider>
@@ -1155,6 +1220,98 @@ conceived.
 			<apn value="pinternet.interkom.de"/>
 		</gsm>
 	</provider>
+	<provider>
+		<!-- This configuration is valid for all vistream retailers like
+		     solomo, igge & ko, sdt.net, Südkurier-Tel etc.-->
+		<name>vistream</name>
+		<gsm>
+			<apn value="internet.vistream.net">
+				<username>web</username>
+				<password>vistream</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>solomo</name>
+		<gsm>
+			<apn value="internet.vistream.net">
+				<username>web</username>
+				<password>vistream</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Materna BR</name>
+		<gsm>
+			<apn value="internet.vistream.net">
+				<username>web</username>
+				<password>vistream</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>sdt.net</name>
+		<gsm>
+			<apn value="internet.vistream.net">
+				<username>web</username>
+				<password>vistream</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>igge &amp; ko</name>
+		<gsm>
+			<apn value="internet.vistream.net">
+				<username>web</username>
+				<password>vistream</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>PTT mobile</name>
+		<gsm>
+			<apn value="internet.vistream.net">
+				<username>web</username>
+				<password>vistream</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>TouristMobile</name>
+		<gsm>
+			<apn value="internet.vistream.net">
+				<username>web</username>
+				<password>vistream</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>SunSIM</name>
+		<gsm>
+			<apn value="internet.vistream.net">
+				<username>web</username>
+				<password>vistream</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>SüdkurierTel</name>
+		<gsm>
+			<apn value="internet.vistream.net">
+				<username>web</username>
+				<password>vistream</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>NetCologne</name>
+		<gsm>
+			<apn value="internet.netcologne.de">
+				<username>web</username>
+				<password>password</password>
+			</apn>
+		</gsm>
+	</provider>
 </country>
 
 <!-- Denmark -->
@@ -1245,6 +1402,38 @@ conceived.
 	</provider>
 </country>
 
+<!-- Algeria -->
+<country code="dz">
+	<provider>
+		<name>Djezzy</name>
+		<gsm>
+			<network-id mcc="603" mnc="02"/>
+			<apn value="djezzy.internet"/>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Mobilis</name>
+		<gsm>
+			<network-id mcc="603" mnc="01"/>
+			<apn value="internet">
+				<username>internet</username>
+				<password>internet</password>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Nedjma</name>
+		<gsm>
+			<network-id mcc="603" mnc="03"/>
+			<apn value="internet">
+				<name>WEB</name>
+				<username>nedjma</username>
+				<password>nedjma</password>
+			</apn>
+		</gsm>
+	</provider>
+</country>
+
 <!-- Ecuador -->
 <country code="ec">
 	<provider>
@@ -1298,7 +1487,7 @@ conceived.
 <!-- Egypt -->
 <country code="eg">
 	<provider>
-		<name>Click Vodafone</name>
+		<name>Vodafone</name>
 		<gsm>
 			<network-id mcc="602" mnc="02"/>
 			<apn value="internet.vodafone.net">
@@ -1355,7 +1544,10 @@ conceived.
 		<name>Ono</name>
 		<gsm>
 			<network-id mcc="214" mnc="18"/>
-			<apn value="internet.ono.com" />
+			<apn value="internet.ono.com">
+				<dns>62.42.230.24</dns>
+				<dns>62.42.63.52</dns>
+			</apn>
 		</gsm>
 	</provider>
 	<provider>
@@ -1473,6 +1665,14 @@ conceived.
 				<name>Prointernet</name>
 				<dns>192.89.123.230</dns>
 				<dns>192.89.123.231</dns>
+			</apn>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Welho</name>
+		<gsm>
+			<apn value="internet.welho.fi">
+				<name>Wekkula</name>
 			</apn>
 		</gsm>
 	</provider>
@@ -1598,6 +1798,16 @@ conceived.
 		<name>airtel vodaphone</name>
 		<gsm>
 			<apn value="airtel-ci-gprs.com"/>
+		</gsm>
+	</provider>
+	<provider>
+		<name>BT Mobile</name>
+		<gsm>
+			<network-id mcc="234" mnc="00"/>
+			<apn value="btmobile.bt.com">
+				<username>bt</username>
+				<password>bt</password>
+			</apn>
 		</gsm>
 	</provider>
 	<provider>
@@ -1739,16 +1949,14 @@ conceived.
 <!-- Ghana -->
 <country code="gh">
 	<provider>
-		<name>Areeba</name>
+		<name>MTN</name>
 		<gsm>
-			<apn value="internet.areeba.com.gh">
-				<dns>196.201.34.5</dns>
-				<dns>213.137.131.3</dns>
-			</apn>
+			<network-id mcc="620" mnc="01"/>
+			<apn value="internet"/>
 		</gsm>
 	</provider>
 	<provider>
-		<name>ONETouch / Ghana Telecom</name>
+		<name>Vodafone (ONEtouch)</name>
 		<gsm>
 			<network-id mcc="620" mnc="02"/>
 			<apn value="browse"/>
@@ -1769,6 +1977,10 @@ conceived.
 			<apn value="internet"/>
 		</gsm>
 	</provider>
+	<provider>
+		<name>Kasapa</name>
+		<cdma/>
+	</provider>
 </country>
 
 <!-- Greece -->
@@ -1783,16 +1995,6 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
-		<name>Telestet</name>
-		<gsm>
-			<apn value="gnet.b-online.gr">
-				<password>24680</password>
-				<dns>212.152.79.19</dns>
-				<dns>212.152.79.20</dns>
-			</apn>
-		</gsm>
-	</provider>
-	<provider>
 		<name>Vodafone</name>
 		<gsm>
 			<network-id mcc="202" mnc="05"/>
@@ -1800,8 +2002,10 @@ conceived.
 		</gsm>
 	</provider>
 	<provider>
-		<name>TIM</name>
+		<name>Wind</name>
 		<gsm>
+			<network-id mcc="202" mnc="09"/>
+			<network-id mcc="202" mnc="10"/>
 			<apn value="gint.b-online.gr">
 				<username>web</username>
 				<password>web</password>
@@ -2357,6 +2561,13 @@ conceived.
 			<password>internet</password>
 		</cdma>
 	</provider>
+	<provider>
+		<name>Tata Indicom (Photon+)</name>
+		<cdma>
+			<username>internet</username>
+			<password>internet</password>
+		</cdma>
+	</provider>
 </country>
 
 <!-- Iceland -->
@@ -2414,9 +2625,13 @@ conceived.
 			<network-id mcc="222" mnc="88"/>
 			<apn value="internet.wind">
 				<name>Non-business</name>
+				<username>Wind</username>
+				<password>Wind</password>
 			</apn>
 			<apn value="internet.wind.biz">
 				<name>Business</name>
+				<username>Wind</username>
+				<password>Wind</password>
 			</apn>
 		</gsm>
 	</provider>
@@ -2606,13 +2821,51 @@ conceived.
 	</provider>
 </country>
 
+<!-- Korea, Republic of -->
+<country code="kr">
+	<provider>
+		<name>KTF</name>
+		<cdma>
+			<!-- cid: "016" -->
+			<username>ktf</username>
+			<password>ktf</password>
+		</cdma>
+	</provider>
+	<provider>
+		<name>LGTelecom</name>
+		<cdma>
+			<!-- cid: "109" -->
+			<!--
+			username must be xxxx(yournumber)@lgt.co.kr and
+			password must be your last 4 number
+			<username>number@lgt.co.kr</username>
+			<password></password>
+			-->
+		</cdma>
+	</provider>
+	<provider>
+		<name>SKTelecom</name>
+		<cdma>
+			<!-- cid: 1501 -->
+			<username>sktelecom</username>
+		</cdma>
+	</provider>
+</country>
+
 <!-- Kuwait -->
 <country code="kw">
 	<provider>
 		<name>Zain</name>
 		<gsm>
 			<network-id mcc="419" mnc="02"/>
-			<apn value="pps"/>
+			<apn value="pps">
+				<name>Personal</name>
+				<username>pps</username>
+				<password>pps</password>
+			</apn>
+			<apn value="apn01">
+				<name>Corporate</name>
+			</apn>
 		</gsm>
 	</provider>
 	<provider>
@@ -2620,6 +2873,13 @@ conceived.
 		<gsm>
 			<network-id mcc="419" mnc="03"/>
 			<apn value="action.wataniya.com"/>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Viva</name>
+		<gsm>
+			<network-id mcc="419" mnc="04"/>
+			<apn value="viva"/>
 		</gsm>
 	</provider>
 </country>
@@ -2636,6 +2896,42 @@ conceived.
 				<dns>194.226.128.1</dns>
 			</apn>
 		</gsm>
+	</provider>
+	<provider>
+		<name>K'CELL</name>
+		<gsm>
+			<network-id mcc="401" mnc="02"/>
+			<apn value="internet"/>
+		</gsm>
+	</provider>
+	<provider>
+		<!-- Owned by K'CELL -->
+		<name>Activ</name>
+		<gsm>
+			<network-id mcc="401" mnc="02"/>
+			<apn value="internet"/>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Neo</name>
+		<gsm>
+			<network-id mcc="401" mnc="77"/>
+			<apn value="internet"/>
+		</gsm>
+	</provider>
+	<provider>
+		<name>Pathword</name>
+		<cdma>
+			<username>Pathword</username>
+			<password>Pathword</password>
+		</cdma>
+	</provider>
+	<provider>
+		<name>Dalacom</name>
+		<cdma>
+			<username>Dalacom</username>
+			<password>Dalacom</password>
+		</cdma>
 	</provider>
 </country>
 
@@ -2891,6 +3187,20 @@ conceived.
 		<gsm>
 			<network-id mcc="297" mnc="03"/>
 			<apn value="gprsinternet"/>
+		</gsm>
+	</provider>
+</country>
+
+<!-- Mali -->
+<country code="ml">
+	<provider>
+		<name>Orange</name>
+		<gsm>
+			<network-id mcc="610" mnc="02"/>
+			<apn value="iew">
+				<username>iew</username>
+				<password>iew</password>
+			</apn>
 		</gsm>
 	</provider>
 </country>
@@ -3663,7 +3973,15 @@ conceived.
 		<name>Tigo</name>
 		<gsm>
 			<network-id mcc="744" mnc="04"/>
-			<apn value="internet.tigo.py "></apn>
+			<apn value="internet.tigo.py">
+				<name>Internet</name>
+			</apn>
+			<apn value="broadband.tigo.py">
+				<name>Broadband</name>
+				<name xml:lang="es">Banda Ancha Móvil</name>
+				<username>tigo</username>
+				<password>tigo</password>
+			</apn>
 		</gsm>
 	</provider>
 </country>
@@ -3709,7 +4027,7 @@ conceived.
 			<network-id mcc="220" mnc="01"/>
 			<apn value="internet">
 				<username>telenor</username>
-				<password>grps</password>
+				<password>gprs</password>
 			</apn>
 		</gsm>
 	</provider>
@@ -3719,7 +4037,7 @@ conceived.
 			<network-id mcc="220" mnc="03"/>
 			<apn value="gprsinternet">
 				<username>mts</username>
-				<password>64</password>
+				<password>064</password>
 				<dns>195.178.38.3</dns>
 			</apn>
 		</gsm>
@@ -4021,6 +4339,7 @@ conceived.
 		<name>Tele2/Comviq</name>
 		<gsm>
 			<network-id mcc="240" mnc="07"/>
+			<network-id mcc="240" mnc="05"/>
 			<apn value="internet.tele2.se"/>
 		</gsm>
 	</provider>
@@ -4043,12 +4362,20 @@ conceived.
 		<name>Telia</name>
 		<gsm>
 			<network-id mcc="240" mnc="01"/>
+			<network-id mcc="240" mnc="05"/>
 
 			<!-- http://www3.telia.se/foretag/mobilguiden/ -->
 			<apn value="online.telia.se"/>
 		</gsm>
 	</provider>
-
+	<provider>
+		<name>TDC</name>
+		<gsm>
+			<network-id mcc="240" mnc="07"/>
+			<network-id mcc="240" mnc="05"/>
+			<apn value="internet.se"/>
+		</gsm>
+	</provider>
 </country>
 
 <!-- Singapore -->
@@ -4761,6 +5088,7 @@ conceived.
 			<sid value="1652"/>
 			<sid value="1750"/>
 			<sid value="1752"/>
+			<sid value="1812"/>
 			<sid value="1818"/>
 			<sid value="1872"/>
 			<sid value="1989"/>
